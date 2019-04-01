@@ -13,6 +13,10 @@ var _ = require('lodash');
 //    var month = (m.format('MMMM'))
  //   console.log(_.map(month));
 //}
+var arrayDays = ["Monday", "Tuesday","Wensday","Thursday","Friday","Saturday","Sunday"];
+for(var i = 0; i< arrayDays.length;i++){
+}
+console.log(_.pad(arrayDays,13));
 const start = new Date(2019, 1, 1); // 1st
 const two   = new Date(2019, 1, 2); // 2nd
 const end   = new Date(2019, 12, 31); // 5th
@@ -21,5 +25,5 @@ const range2 = moment.range(start, two);
 const acc = Array.from(range1.byRange(range2));
 
 acc.length == 31 // true
-console.log(chalk.blue(acc.map(m => _.map(m.format('DD'))))); // ['01','02','03','04','05']
+console.log(chalk.blue(acc.map(m =>(m.format('DD'))))); // ['01','02','03','04','05']
 
